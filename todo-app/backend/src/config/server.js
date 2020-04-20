@@ -8,6 +8,7 @@ const allowCors = require("./cors");
 //todas as requisições passarão por esse midwares
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(bodyParser.json());
+server.use(allowCors);
 
 server.listen(port, function () {
   console.log(`BACKEND is running on port ${port}.`);
